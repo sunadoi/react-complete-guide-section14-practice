@@ -9,12 +9,12 @@ import { createStore, combineReducers } from 'redux';
 import personReducer from './store/reducers/person';
 import resultReducer from './store/reducers/result';
 
-const rootReducer = combineReducers({
-  person: personReducer,
-  result: resultReducer
-})
+// const rootReducer = combineReducers({
+//   per: personReducer,
+//   res: resultReducer
+// })
 
-const store = createStore(rootReducer);
+const store = createStore(personReducer);
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();
